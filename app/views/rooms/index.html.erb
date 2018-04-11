@@ -1,0 +1,14 @@
+<h1>Rooms Index</h1>
+<table>
+<% @rooms.each do |room| %>
+  <tr>
+    <td><%= room.id %></td>
+    <td><%= link_to 'Show', room %></td>
+  </tr>
+<% end %>
+</table>
+
+<%= form_for @new_room do |f| %>
+  <%= f.text_field :name %>
+  <%= f.submit "Create" %>
+<% end %>
